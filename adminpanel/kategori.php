@@ -71,7 +71,7 @@
                                             </tr>
                                         <?php
                                     }
-                                    $jumlah++;
+                                    $jumlah++; f
                                 }
                             
                             ?>
