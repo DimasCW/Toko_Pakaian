@@ -120,6 +120,7 @@
                                                     <i class="fas fa-search"></i>
                                                 </a>
                                                 </td>
+                                                </td>
                                             </tr>
                                         <?php
                                         $jumlah++;

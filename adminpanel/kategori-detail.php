@@ -30,8 +30,9 @@
                 <input type="text" name="kategori" id="kategori" class="form-control" value="<?php
                 echo $data['nama'];?>">
                 </div>
-                <div class="mt-5">
+                <div class="mt-5 d-flex justify-content-between">
                     <button type="submit" class="btn btn-primary" name="editBtn">Edit</button>
+                    <button type="submit" class="btn btn-danger" name="deleteBtn">Delete</button>
                 </div>
             </form>
             <?php
@@ -73,6 +74,20 @@
                         }
                     }
                     
+                }
+                if(isset($_POST['deleteBtn'])){
+                    $queryDelete = mysqli_query($con, "DELETE FROM kategori WHERE id='$id'");
+
+                    if($queryDelete){
+                        ?>
+                            <div class="alert alert-primary mt-3">
+                                Kategori Berhasil Dihapus
+                            </div>
+                            <meta http-equiv="refresh"content="1; url=kategori.php" />
+                        <?php
+                    }else{
+                        echo mysqli_error($con);
+                    }
                 }
             ?>
 
