@@ -116,7 +116,7 @@
                                                 <td><?php echo $jumlah?></td>
                                                 <td><?php echo $data['nama']?></td>
                                                 <td>
-                                                    <a href="kategori-detail.php?<?php echo $data['id']?>" class="btn btn-info">
+                                                    <a href="kategori-detail.php?p=<?php echo $data['id']?>" class="btn btn-info">
                                                     <i class="fas fa-search"></i>
                                                 </a>
                                                 </td>
