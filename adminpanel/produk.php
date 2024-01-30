@@ -47,7 +47,7 @@
             </nav>
 
             <div class="my-5 col-12 col-md-6">
-            <h3>Tambah Kategori</h3>
+            <h3>Tambah Produk</h3>
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div>
                         <label for="nama" input="text" id="nama">nama</label>
@@ -68,7 +68,7 @@
                     </div>
 
                     <div>
-                        <label for="harga"></label>
+                        <label for="harga">Harga</label>
                         <input type="number" class="form-control" name="harga">
                     </div>
                     <div>
