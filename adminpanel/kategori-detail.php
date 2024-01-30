@@ -83,7 +83,7 @@
                             <div class="alert alert-primary mt-3">
                                 Kategori Berhasil Dihapus
                             </div>
-                            <meta http-equiv="refresh"content="1; url=kategori.php" />
+                            <meta http-equiv="refresh"content="0; url=kategori.php" />
                         <?php
                     }else{
                         echo mysqli_error($con);
