@@ -50,12 +50,12 @@
             <h3>Tambah Produk</h3>
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div>
-                        <label for="nama" input="text" id="nama">nama</label>
-                        <input type="text" id="nama" name="nama" class="form-control">
+                        <label for="nama" input="text" id="nama" >nama</label>
+                        <input type="text" id="nama" name="nama" class="form-control"required>
                     </div>
                     <div>
                         <label for="kategori">Kategori</label>
-                        <select name="kategori" id="kategori" class="form-control">
+                        <select name="kategori" id="kategori" class="form-control" required>
                             <option value="">Pilih Satu</option>
                         <?php    
                             while($data=mysqli_fetch_array($queryKategori)){
@@ -69,7 +69,7 @@
 
                     <div>
                         <label for="harga">Harga</label>
-                        <input type="number" class="form-control" name="harga">
+                        <input type="number" class="form-control" name="harga" required>
                     </div>
                     <div>
                         <label for="foto">Foto</label>
