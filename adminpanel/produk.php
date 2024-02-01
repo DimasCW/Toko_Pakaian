@@ -87,9 +87,38 @@
                         </select>
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
                     </div>
                 </form>
+                            <?php
+                                if(isset($_POST['simpan']))
+                                {
+                                    $nama = htmlspecialchars($_POST['nama']);
+                                    $kategori = htmlspecialchars($_POST['kategori']);
+                                    $harga = htmlspecialchars($_POST['harga']);
+                                    $detail = htmlspecialchars($_POST['detail']);
+                                    $ketersediaan_Stok = htmlspecialchars($_POST['ketersediaan_stok']);
+                                
+                                    $target_dir = "../image/";
+                                    $nama_file = basename($_FILES["foto"]["name"]);
+                                    $target_file = $target_dir . $nama_file;
+                                    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+                                    $image_size = $_FILES["foto"]["size"];
+
+                                    if($nama=='' || $kategori=='' || $harga==''){
+                                ?>
+                                    <div class="alert alert-warning mt-3" role="alert"> 
+                                        Nama, Kategori dan harga wajib di isi
+
+                                    </div>
+                                <?php
+                                    }else{
+                                        
+                                    }
+                                }
+                            ?>
+
+                            
             </div>
 
             <div class="mt-3">
