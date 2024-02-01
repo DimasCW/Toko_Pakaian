@@ -104,7 +104,7 @@
                                     $target_file = $target_dir . $nama_file;
                                     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                                     $image_size = $_FILES["foto"]["size"];
-
+                                    
                                     if($nama=='' || $kategori=='' || $harga==''){
                                 ?>
                                     <div class="alert alert-warning mt-3" role="alert"> 
@@ -113,7 +113,27 @@
                                     </div>
                                 <?php
                                     }else{
-                                        
+                                        if($nama_file!=''){
+                                            if($image_size> 500000){
+                                                ?>
+                                             <div class="alert alert-warning mt-3" role="alert"> 
+                                                File tidak boleh lebih dari 500kb
+                                             </div>
+
+                                                <?php
+                                            }
+                                            else{
+                                                if($imageFileType!= 'jpg' || $imageFileType != 'png' || $imageFileType != 'gif'){
+                                                    ?>
+                                                    <div class="alert alert-warning mt-3" role="alert"> 
+                                                File wajib jpg, png atau gif
+                                             </div>
+                                                    <?php
+                                                }else{
+                                                    move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             ?>
