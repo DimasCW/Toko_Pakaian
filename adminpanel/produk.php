@@ -123,14 +123,14 @@
                                                 <?php
                                             }
                                             else{
-                                                if($imageFileType!= 'jpg' || $imageFileType != 'png' || $imageFileType != 'gif'){
+                                                if($imageFileType!= 'jpg' && $imageFileType != 'png' && $imageFileType != 'gif'){
                                                     ?>
                                                     <div class="alert alert-warning mt-3" role="alert"> 
                                                 File wajib jpg, png atau gif
                                              </div>
                                                     <?php
                                                 }else{
-                                                    move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+                                                    move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file);
                                                 }
                                             }
                                         }
