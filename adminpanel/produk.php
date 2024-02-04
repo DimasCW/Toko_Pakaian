@@ -116,6 +116,7 @@
                                     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                                     $image_size = $_FILES["foto"]["size"];
                                     $random_name = generationRandomString(20);
+                                    $new_name = $random_name . "." . $imageFileType;
                                     
                                     if($nama=='' || $kategori=='' || $harga==''){
                                 ?>
@@ -142,10 +143,15 @@
                                              </div>
                                                     <?php
                                                 }else{
-                                                    move_uploaded_file($_FILES["foto"]["tmp_name"], $target_dir . $random_name . "." . $imageFileType);
+                                                    move_uploaded_file($_FILES["foto"]["tmp_name"], $target_dir . $new_name);
                                                 }
                                             }
                                         }
+                                        
+                                        
+                                        //query insert to produk table
+                                        $queryTambah = mysqli_query($con, "INSERT INTO produk (kategori_id, nama, harga, foto, detail, ketersediaan_stok) VALUES ('$kategori', '$nama', '$harga', '$new_name')");
+
                                     }
                                 }
                             ?>
