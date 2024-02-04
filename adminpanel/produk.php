@@ -2,7 +2,7 @@
     require "session.php";
     require "../js/koneksi.php";
 
-    $query= mysqli_query($con, "SELECT * FROM produk");
+    $query= mysqli_query($con, "SELECT a.*, b.nama AS nama_kategori FROM produk a JOIN kategori b ON a.kategori_id=b.id");
     $jumlahProduk = mysqli_num_rows($query);
 
     $queryKategori = mysqli_query($con, "SELECT * FROM kategori");
@@ -150,7 +150,18 @@
                                         
                                         
                                         //query insert to produk table
-                                        $queryTambah = mysqli_query($con, "INSERT INTO produk (kategori_id, nama, harga, foto, detail, ketersediaan_stok) VALUES ('$kategori', '$nama', '$harga', '$new_name')");
+                                        $queryTambah = mysqli_query($con, "INSERT INTO produk (kategori_id, nama, harga, foto, detail, ketersediaan_stok) VALUES ('$kategori', '$nama', '$harga', '$new_name', '$detail', '$ketersediaan_stok' )");
+
+                                        if($queryTambah){
+                                            ?>
+                                                <div class="alert alert-warning mt-3" role="alert"> 
+                                                File wajib jpg, png atau gif
+                                             </div> 
+                                            <?php
+
+                                        }else{
+                                            echo mysqli_Error($con);
+                                        }
 
                                     }
                                 }
@@ -162,7 +173,7 @@
             <div class="mt-3">
                 <h2>List Produk</h2>
 
-                <div class="table-responsive mt-5">
+                <div class="table-responsive mt-5 mb-5">
                 <table class="table">
                         <thead>
                             <tr>
@@ -171,6 +182,7 @@
                                 <th>Kategori</th>
                                 <th>Harga</th>
                                 <th>Ketersediaan Stok</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -178,7 +190,7 @@
                                 if($jumlahProduk == 0){
                                     ?>
                                         <tr>
-                                            <td colspan=5 class="text-center">Data Produk Tidak Tersedia</td>   
+                                            <td colspan=6 class="text-center">Data Produk Tidak Tersedia</td>   
                                         </tr>
                                     <?php
                                 }else{
@@ -189,9 +201,14 @@
                                     <tr>
                                         <td><?php echo $jumlah?></td>
                                         <td><?php echo $data['nama'];?></td>
-                                        <td><?php echo $data['kategori_id'];?></td>
+                                        <td><?php echo $data['nama_kategori'];?></td>
                                         <td><?php echo $data['harga'];?></td>
                                         <td><?php echo $data['ketersediaan_stok'];?></td>
+                                        <td>
+                                            <a href="produk-detail.php?p=<?php echo $data['id']?>" class="btn btn-info">
+                                            <i class="fas fa-search"></i>
+                                            </a>
+                                        </td>
                                     </tr>
                                 <?php
                                 $jumlah++;
