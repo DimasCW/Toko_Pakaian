@@ -7,6 +7,17 @@
 
     $queryKategori = mysqli_query($con, "SELECT * FROM kategori");
 
+    // code rename file
+    function generationRandomString($lenght = 10){
+        $characters = '0123456789abcdefghijklmnopqrsrtuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLenght = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $lenght; $i++){
+            $randomString = $characters[rand(0, $charactersLenght - 1)];
+        }
+        return $randomString;
+    }
+
 ?>
 
 <!DOCTYPE html>
