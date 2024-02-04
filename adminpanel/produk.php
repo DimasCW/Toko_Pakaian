@@ -115,6 +115,7 @@
                                     $target_file = $target_dir . $nama_file;
                                     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                                     $image_size = $_FILES["foto"]["size"];
+                                    $random_name = generationRandomString(20);
                                     
                                     if($nama=='' || $kategori=='' || $harga==''){
                                 ?>
@@ -141,7 +142,7 @@
                                              </div>
                                                     <?php
                                                 }else{
-                                                    move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file);
+                                                    move_uploaded_file($_FILES["foto"]["tmp_name"], $target_dir . $random_name . "." . $imageFileType);
                                                 }
                                             }
                                         }
