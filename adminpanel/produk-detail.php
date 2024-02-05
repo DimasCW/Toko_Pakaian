@@ -154,7 +154,7 @@
 
                                             if($queryUpdate){
                                                 ?>
-                                                    <div class="alert alert-warning mt-3" role="alert"> 
+                                                    <div class="alert alert-primary mt-3" role="alert"> 
                                                     Produk berhasil diupdate
                                                     </div>
                                                     <meta http-equiv="refresh" content="2; url=produk.php"/>
