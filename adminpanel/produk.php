@@ -108,7 +108,7 @@
                                     $kategori = htmlspecialchars($_POST['kategori']);
                                     $harga = htmlspecialchars($_POST['harga']);
                                     $detail = htmlspecialchars($_POST['detail']);
-                                    $ketersediaan_Stok = htmlspecialchars($_POST['ketersediaan_stok']);
+                                    $ketersediaan_stok = htmlspecialchars($_POST['ketersediaan_stok']);
                                 
                                     $target_dir = "../image/";
                                     $nama_file = basename($_FILES["foto"]["name"]);
