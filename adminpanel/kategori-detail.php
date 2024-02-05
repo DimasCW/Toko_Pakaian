@@ -24,7 +24,6 @@
     <div class="container mt-5">
         <h2>Detail Kategori</h2>
         <div class="col-12 col-md-6">
-            <form action="" method="post">
                 <div>
                 <label for="kategori">Kategori</label>
                 <input type="text" name="kategori" id="kategori" class="form-control" value="<?php

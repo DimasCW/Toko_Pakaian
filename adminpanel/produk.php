@@ -141,6 +141,7 @@
                                                     <div class="alert alert-warning mt-3" role="alert"> 
                                                 File wajib jpg, png atau gif
                                              </div>
+                                             <meta http-equiv="refresh" content="2; url=kategori.php"/>
                                                     <?php
                                                 }else{
                                                     move_uploaded_file($_FILES["foto"]["tmp_name"], $target_dir . $new_name);
@@ -150,13 +151,15 @@
                                         
                                         
                                         //query insert to produk table
-                                        $queryTambah = mysqli_query($con, "INSERT INTO produk (kategori_id, nama, harga, foto, detail, ketersediaan_stok) VALUES ('$kategori', '$nama', '$harga', '$new_name', '$detail', '$ketersediaan_stok' )");
+                                        $queryTambah = mysqli_query($con, "INSERT INTO produk (kategori_id, nama, harga, foto, detail, ketersediaan_stok) 
+                                        VALUES ('$kategori', '$nama', '$harga', '$new_name', '$detail', '$ketersediaan_stok' )");
 
                                         if($queryTambah){
                                             ?>
                                                 <div class="alert alert-warning mt-3" role="alert"> 
-                                                File wajib jpg, png atau gif
-                                             </div> 
+                                                Produk berhasil disimpan
+                                            </div> 
+                                            <meta http-equiv="refresh" content="2; url=kategori.php"/>
                                             <?php
 
                                         }else{
