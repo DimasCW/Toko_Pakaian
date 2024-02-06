@@ -1,0 +1,21 @@
+
+.warna1{
+    background-color: #876445;
+  }
+
+  .warna2{
+    background-color: #ca965c;
+  }
+
+  .warna3{
+    background-color: #eec373;
+  }
+
+  .warna4{
+    background-color: #f4dfba;
+  }
+
+  .banner{
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/image/clark-street-mercantile-P3pI6xzovu0-unsplash.jpg');
+  }
