@@ -1,6 +1,6 @@
 <?php
     require "session.php";
-    require "../js/koneksi.php";
+    require "../koneksi.php";
     
     $id = $_GET['p'];
 

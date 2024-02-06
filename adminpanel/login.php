@@ -1,6 +1,6 @@
 <?php
 session_start();
-    require "../js/koneksi.php";
+    require "../koneksi.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

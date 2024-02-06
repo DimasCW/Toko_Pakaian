@@ -1,5 +1,4 @@
 body {
-    background-color: #f45b69;
     font-family: "Asap", sans-serif;
   }
   
@@ -127,4 +126,22 @@ body {
     justify-content: center;
     align-items: center;
     
+  }
+
+  
+
+  .warna1{
+    background-color: #876445;
+  }
+
+  .warna2{
+    background-color: #ca965c;
+  }
+
+  .warna3{
+    background-color: #eec373;
+  }
+
+  .warna4{
+    background-color: #f4dfba;
   }

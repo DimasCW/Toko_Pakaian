@@ -1,6 +1,6 @@
 <?php
     require "session.php";
-    require "../js/koneksi.php";
+    require "../koneksi.php";
 
     $querykategori = mysqli_query($con, "SELECT * FROM kategori");
     $jumlahKategori = mysqli_num_rows($querykategori);
