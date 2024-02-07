@@ -1,5 +1,5 @@
 
-.warna1{
+  .warna1{
     background-color: #876445;
   }
 
@@ -15,9 +15,28 @@
     background-color: #f4dfba;
   }
 
+  .no-decoration{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .no-decoration:hover{
+    color: #eec373;
+  }
+
+  .stroke-text-white {
+    color: #fff; /* Text color */
+    -webkit-text-stroke: 1px black; /* Width and color of the stroke for WebKit browsers (Chrome, Safari) */
+    text-stroke: 1px black; /* Width and color of the stroke for other browsers */
+  }
+
+
   .banner{
     height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/image/clark-street-mercantile-P3pI6xzovu0-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+    background-image: url('/image/clark-street-mercantile-P3pI6xzovu0-unsplash.jpg');
   }
 
   .highlighted-kategori{
@@ -25,20 +44,20 @@
   }
 
   .kategori-baju-wanita{
-    border: solid;
+    background-image: url('/image/dmitry-vechorko-d1Uas0zA86g-unsplash.jpg');
     background-size: cover;
     background-position: center;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/image/jose-mizrahi-OKWWYf3yLCo-unsplash.jpg');
+    background-repeat: no-repeat;  
   }
   .kategori-sepatu{
-    border: solid;
+    background-image: url('/image/maksim-larin-NOpsC3nWTzY-unsplash.jpg');
     background-size: cover;
     background-position: center;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/image/maksim-larin-NOpsC3nWTzY-unsplash.jpg');
+    background-repeat: no-repeat;  
   }
   .kategori-baju-pria{
-    border: solid;
+    background-image: url('/image/hunters-race-MYbhN8KaaEc-unsplash.jpg');
     background-size: cover;
     background-position: center;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/image/hunters-race-MYbhN8KaaEc-unsplash.jpg');
+    background-repeat: no-repeat;  
   }

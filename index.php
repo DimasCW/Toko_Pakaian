@@ -13,9 +13,9 @@
     <?php require "navbar.php"; ?>
     <!-- banner -->
 <div class="container-fluid banner d-flex align-items-center">
-    <div class="container text-center white">
-        <h1>Toko Online Fashion</h1>
-        <h3>Mau Cari Apa</h3>
+    <div class="container text-center">
+        <h1 class="stroke-text-white">Toko Online Fashion</h1>
+        <h3 class="stroke-text-white">Mau Cari Apa</h3>
             <div class="col-md-8 offset-md-2">
                 <form action="produk.php" method="get">
             <div class="input-group input-group-lg my-4" bis_skin_checked="1">
@@ -33,27 +33,35 @@
         <div class="container">
             <h3>Kategori Teratas</h3>
 
+
             <div class="row mt-5">
-                <div class="col-4">
+                <div class="col-md-4 mb-3">
                     <div class="highlighted-kategori kategori-baju-pria d-flex justify-content-center align-items-center">
-                        <h4 class="text-white">Baju Pria</h4>
+                        <h4 class="text-white"><a class="no-decoration" href="produk.php?kategori=Baju Pria">Baju Pria</a></h4>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="highlighted-kategori kategori-baju-wantia d-flex justify-content-center align-items-center">
-                        <h4 class="text-white">Baju Wanita</h4>
+                <div class="col-md-4 mb-3">
+                    <div class="highlighted-kategori kategori-baju-wanita d-flex justify-content-center align-items-center">
+                        <h4 class="text-white"><a class="no-decoration" href="produk.php?kategori=Baju Wanita">Baju Wanita</a></h4>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 mb-3">
                     <div class="highlighted-kategori kategori-sepatu d-flex justify-content-center align-items-center">
-                        <h4 class="text-white">Sepatu</h4>
+                        <h4 class="text-white"><a class="no-decoration" href="produk.php?kategori=Sepatu">Sepatu</a></h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
+<!-- tentang kami -->
+    <div class="container-fluid warna3 py-5">
+        <div class="container text-center">
+            <h3>Tentang Kami</h3>
+            <p class="fs-5 mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit est voluptate rem eius, dolores odit quaerat praesentium fugiat animi recusandae saepe quis officia at autem facere perspiciatis explicabo, quidem ipsa, voluptatem suscipit. Hic, odio
+                 autem veniam, quaerat consequuntur nulla aspernatur ad molestiae necessitatibus nemo saepe esse deserunt quae nisi! Alias porro quod cum accusantium quidem incidunt architecto fuga, voluptatum sapiente veniam? Deleniti natus iure nam maxime expedita vero sed eaque voluptatibus! Omnis eius neque provident error soluta, quia expedita quisquam.</p>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="../fontawesome/js/all.min.js></script>
 </body>

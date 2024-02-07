@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark warna1">
+<nav class="navbar navbar-expand-lg navbar-dark warna1" >
     <div class="container fluid"> 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
