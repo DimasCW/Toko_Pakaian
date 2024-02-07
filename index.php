@@ -1,3 +1,8 @@
+<?php
+    require "koneksi.php";
+    $queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM produk LIMIT 6 ");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,6 +66,30 @@
             <p class="fs-5 mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit est voluptate rem eius, dolores odit quaerat praesentium fugiat animi recusandae saepe quis officia at autem facere perspiciatis explicabo, quidem ipsa, voluptatem suscipit. Hic, odio
                  autem veniam, quaerat consequuntur nulla aspernatur ad molestiae necessitatibus nemo saepe esse deserunt quae nisi! Alias porro quod cum accusantium quidem incidunt architecto fuga, voluptatum sapiente veniam? Deleniti natus iure nam maxime expedita vero sed eaque voluptatibus! Omnis eius neque provident error soluta, quia expedita quisquam.</p>
         </div>
+    </div>
+
+
+    <!-- produk -->
+    <div class="container-fluid py-5">
+        <div class="container text-center">
+            <h3>Produk</h3>
+
+            <div class="row mt-5">
+                <?php 
+                    while($data = mysqli_fetch_array($queryProduk)){
+                ?>
+                <div class="col-sm-6 col-md-4 mb-3">
+                    <div class="card">
+                        <img src="image/<?php echo $data['foto'];?> " class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title"><?php echo $data['nama'] ?></h4>
+                                <p class="card-text text-truncate"><?php echo $data['detail']?></p>
+                                <p class="card-text text-harga">Rp <?php echo $data['harga']?></p>
+                                <a href="#" class="btn warna2 text-white">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                    <?php } ?>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="../fontawesome/js/all.min.js></script>

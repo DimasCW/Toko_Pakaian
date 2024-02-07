@@ -127,7 +127,7 @@
                                 <?php
                                     }else{
                                         if($nama_file!=''){
-                                            if($image_size> 500000){
+                                            if($image_size> 50000000000){
                                                 ?>
                                              <div class="alert alert-warning mt-3" role="alert"> 
                                                 File tidak boleh lebih dari 500kb
