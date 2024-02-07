@@ -19,3 +19,26 @@
     height: 80vh;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/image/clark-street-mercantile-P3pI6xzovu0-unsplash.jpg');
   }
+
+  .highlighted-kategori{
+    height: 250px;
+  }
+
+  .kategori-baju-wanita{
+    border: solid;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/image/jose-mizrahi-OKWWYf3yLCo-unsplash.jpg');
+  }
+  .kategori-sepatu{
+    border: solid;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/image/maksim-larin-NOpsC3nWTzY-unsplash.jpg');
+  }
+  .kategori-baju-pria{
+    border: solid;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/image/hunters-race-MYbhN8KaaEc-unsplash.jpg');
+  }

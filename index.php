@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php require "navbar.php"; ?>
-    
+    <!-- banner -->
 <div class="container-fluid banner d-flex align-items-center">
     <div class="container text-center white">
         <h1>Toko Online Fashion</h1>
@@ -27,6 +27,31 @@
     </div>
     
 </div>
+
+<!-- highlight kategori -->
+    <div class="container-fluid py-5 text-center">
+        <div class="container">
+            <h3>Kategori Teratas</h3>
+
+            <div class="row mt-5">
+                <div class="col-4">
+                    <div class="highlighted-kategori kategori-baju-pria d-flex justify-content-center align-items-center">
+                        <h4 class="text-white">Baju Pria</h4>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="highlighted-kategori kategori-baju-wantia d-flex justify-content-center align-items-center">
+                        <h4 class="text-white">Baju Wanita</h4>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="highlighted-kategori kategori-sepatu d-flex justify-content-center align-items-center">
+                        <h4 class="text-white">Sepatu</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
