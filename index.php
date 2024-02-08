@@ -79,18 +79,26 @@
                     while($data = mysqli_fetch_array($queryProduk)){
                 ?>
                 <div class="col-sm-6 col-md-4 mb-3">
-                    <div class="card">
+                    <div class="card h-100">
+                        <div class="image-box">
                         <img src="image/<?php echo $data['foto'];?> " class="card-img-top" alt="...">
+                        </div>
                             <div class="card-body">
                                 <h4 class="card-title"><?php echo $data['nama'] ?></h4>
                                 <p class="card-text text-truncate"><?php echo $data['detail']?></p>
                                 <p class="card-text text-harga">Rp <?php echo $data['harga']?></p>
-                                <a href="#" class="btn warna2 text-white">Lihat Detail</a>
+                                <a href="produk-detail.php?nama=<?php echo $data['nama'];?>" class="btn warna2 text-white">Lihat Detail</a>
                             </div>
                         </div>
                     </div>
                     <?php } ?>
     </div>
+
+    <a class="btn btn-outline-warning mb-5" href="produk.php">See more</a>
+<?php
+    require "footer.php";
+?>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="../fontawesome/js/all.min.js></script>
 </body>
