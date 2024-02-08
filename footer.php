@@ -1,5 +1,4 @@
 <!-- footer -->
-<div class="footer">
     <div class="container-fluid py-5 content-subscribe text-light">
         <div class="container">
             <h5 class="text-center mb-4">Temui Kami</h5>
@@ -28,4 +27,3 @@
             <label for="">Created by Dimas Chandra Winata</label>
         </div>
     </div>
-</div>
