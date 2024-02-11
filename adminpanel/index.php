@@ -49,7 +49,7 @@
             </ol>
         </nav>
 
-        <h2>halo <?php echo $_SESSION['username'];?></h2>
+        <h2>halooo <?php echo $_SESSION['username'];?></h2>
 
         <div class="container mt-5">
             <div class="row">
